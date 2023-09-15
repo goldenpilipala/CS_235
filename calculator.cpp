@@ -19,7 +19,7 @@ string input(string prompt) {
 }
 
 int main(int argc, char const* argv[]) {
-    cout << endl;
+    //cout << endl;
     /*cout << "Welcome to the calculator!\n"
             "Please choose one of the following operations:" << endl;
     cout << "1) add\n"
@@ -43,7 +43,7 @@ int main(int argc, char const* argv[]) {
             //cout << endl << "Operation: ";
             //cin >> operation;
 
-            operation = input("\noperation: ");
+            operation = input("operation: ");
 
             //----------VALIDATING THE OPERATION-----------//
 
@@ -85,18 +85,18 @@ int main(int argc, char const* argv[]) {
         //----------CALLING THE FUNCTIONS-----------//
 
         if(operation == "add")
-            cout << add(leftOperand, rightOperand);
+            cout << add(leftOperand, rightOperand) << endl;
         if(operation == "subtract")
-            cout << subtract(leftOperand, rightOperand);
+            cout << subtract(leftOperand, rightOperand) << endl;
         if(operation == "multiply")
-            cout << multiply(leftOperand, rightOperand);
+            cout << multiply(leftOperand, rightOperand) << endl;
         if(operation == "divide")
-            cout << divide(leftOperand, rightOperand);
+            cout << divide(leftOperand, rightOperand) << endl;
         if(operation == "mod")
-            cout << mod(leftOperand, rightOperand);
+            cout << mod(leftOperand, rightOperand) << endl;
     }
 
-    cout << "\nCongrats! You made it to the end of the program";
+    //cout << "\nCongrats! You made it to the end of the program";
 
     return 0;
 }
