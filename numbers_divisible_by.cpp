@@ -35,13 +35,11 @@ vector<int> values(int start, int end, int divisor){
     return output;
 }
 
-int main() {
+int main(int argc, char const* argv[]) {
 
-    int start = 0;
-    int end = 0;
-    int divisor = 0;
-
-    cin >> start >> end >> divisor;
+    int start = stoi(argv[1]);
+    int end = stoi(argv[2]);
+    int divisor = stoi(argv[3]);
 
     if(start < end)
         lowToHigh(values(start, end, divisor));
