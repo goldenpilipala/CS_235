@@ -13,6 +13,15 @@ void highToLow(vector<int> output){
         cout << output[i] << endl;
 }
 
+vector<int> negNums(int lesser, int greater, int divisor){
+    vector<int> numsDecreasing;
+    for(int i = 0; i >= lesser; i=i-divisor){
+        if(i < greater && i != 0)
+            numsDecreasing.push_back(i);
+    }
+    return numsDecreasing;
+}
+
 vector<int> values(int start, int end, int divisor){
     vector<int> output;
     int greaterValue;
@@ -27,15 +36,24 @@ vector<int> values(int start, int end, int divisor){
         lesserValue = start;
     }
 
-    for(int temp = 0; temp <= greaterValue; temp = temp + divisor){
-        if(temp > lesserValue)
-            output.push_back(temp);
+    if(lesserValue < 0){ //Account for negative numbers
+        vector<int> numsDecreasing = negNums(lesserValue, greaterValue, divisor);
+        for(int i = numsDecreasing.size()-1; i >= 0; i--){
+            output.push_back(numsDecreasing[i]); //Adds numsDecreasing to output in increasing order
+        }
+    }
+
+    for(int k = 0; k <= greaterValue; k = k+divisor){
+        if(k > lesserValue)
+            output.push_back(k);
     }
 
     return output;
 }
 
 int main(int argc, char const* argv[]) {
+
+    //int start, end, divisor; cin >> start >> end >> divisor; //For testing purposes
 
     int start = stoi(argv[1]);
     int end = stoi(argv[2]);
