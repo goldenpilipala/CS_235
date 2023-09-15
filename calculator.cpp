@@ -51,7 +51,7 @@ int main(int argc, char const* argv[]) {
                 operation == "divide" || operation == "mod" || operation == "") {
                 notValidOperation = false;
             } else {
-                cout << operation << " isn't a valid operation";
+                cout << operation << " isn't a valid operation" << endl;
                 notValidOperation = true;
             }
         }
