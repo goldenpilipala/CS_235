@@ -44,7 +44,7 @@ vector<int> values(int start, int end, int divisor){
     }
 
     for(int k = 0; k <= greaterValue; k = k+divisor){
-        if(k > lesserValue)
+        if(k >= lesserValue)
             output.push_back(k);
     }
 
