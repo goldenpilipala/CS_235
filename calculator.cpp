@@ -20,13 +20,13 @@ string input(string prompt) {
 
 int main(int argc, char const* argv[]) {
     cout << endl;
-    cout << "Welcome to the calculator!\n"
+    /*cout << "Welcome to the calculator!\n"
             "Please choose one of the following operations:" << endl;
     cout << "1) add\n"
             "2) subtract\n"
             "3) multiply\n"
             "4) divide\n"
-            "5) mod" << endl;
+            "5) mod" << endl;*/
 
     string operation = "null";
     double leftOperand = 0;
@@ -43,7 +43,7 @@ int main(int argc, char const* argv[]) {
             //cout << endl << "Operation: ";
             //cin >> operation;
 
-            operation = input("\nOperation: ");
+            operation = input("\noperation: ");
 
             //----------VALIDATING THE OPERATION-----------//
 
@@ -51,7 +51,7 @@ int main(int argc, char const* argv[]) {
                 operation == "divide" || operation == "mod" || operation == "") {
                 notValidOperation = false;
             } else {
-                cout << operation << " isn't a valid operation. Please enter one again.";
+                cout << operation << " isn't a valid operation.";
                 notValidOperation = true;
             }
         }
@@ -70,8 +70,8 @@ int main(int argc, char const* argv[]) {
         cin >> rightOperand;
         cin.ignore(); //The KEY*/
 
-        leftOperand = stod(input("Left Operand: ")); //stod()- convert from string to double
-        rightOperand = stod(input("Right Operand: "));
+        leftOperand = stod(input("left operand: ")); //stod()- convert from string to double
+        rightOperand = stod(input("right operand: "));
             //Btw, this does not valid the input, but it does throw an error
             /*Throws an error before even asking for input:
              * terminate called after throwing an instance of 'std::invalid_argument'
@@ -102,27 +102,27 @@ int main(int argc, char const* argv[]) {
 }
 
 double add(double leftOperand, double rightOperand){
-    cout << "You accessed the add function: ";
+    //cout << "You accessed the add function: ";
     return leftOperand + rightOperand;
 }
 
 double subtract(double leftOperand, double rightOperand){
-    cout << "You accessed the subtract function: ";
+    //cout << "You accessed the subtract function: ";
     return leftOperand - rightOperand;
 }
 
 double multiply(double leftOperand, double rightOperand){
-    cout << "You accessed the multiply function: ";
+    //cout << "You accessed the multiply function: ";
     return leftOperand * rightOperand;
 }
 
 double divide(double leftOperand, double rightOperand){
-    cout << "You accessed the divide function: ";
+    //cout << "You accessed the divide function: ";
     return leftOperand / rightOperand;
 }
 
 double mod(double leftOperand, double rightOperand){
-    cout << "You accessed the mod function: ";
+    //cout << "You accessed the mod function: ";
     // The % operator only works for ints
     return fmod(leftOperand, rightOperand);
 }
