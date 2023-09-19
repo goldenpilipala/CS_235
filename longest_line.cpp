@@ -16,28 +16,27 @@ int numWords(string line){
     return i;
 }
 
-int main(int argc, char const* argv[]) {
+int main(int argc, char const* argv
+[]) {
     string inputFile = argv[1];
-    //string inputFile = "example.txt"; //For testing purposes
-
-    //cout << "Test 1" << endl;
 
     //Open the file
     ifstream ifp(inputFile);
 
-    int wordsLastLine = 0;
+    int greatestWords = 0;
     string currentLine = "";
     string longestLine = "";
 
     while(!ifp.eof()){
         getline(ifp, currentLine);
 
-        //cout << "Test 2: " << currentLine << endl;
+        int currentWords = numWords(currentLine);
 
-        if(numWords(currentLine) > wordsLastLine)
+        if(currentWords > greatestWords){
             longestLine = currentLine;
+            greatestWords = currentWords;
+        }
 
-        wordsLastLine = numWords(currentLine);
     }
 
     cout << longestLine << endl;
