@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//TODO: Errors for only number of lines and for no arguments
+
 int main(int argc, char const* argv[]) {
 
     //Finding numLines and textFile
@@ -25,8 +27,14 @@ int main(int argc, char const* argv[]) {
     }
 
     //If no file is provided, read from cin
-    if(textFile == "notAFile.haha"){
-        cin >> textFile;
+    if(textFile == "notAFile.haha"){ //cin will give you a list (string with \n)
+        string line;
+        int k=0;
+        while(getline(cin, line)){
+            if(k < numLines)
+                cout << line << endl;
+            k++;
+        }
     }
 
     //Opening file
