@@ -36,7 +36,5 @@ int main(int argc, char const* argv[]) {
 
     cout << a << ' ' << b << ' ' << c << endl;
 
-    cout << "what " << a[14] << " is this" << endl;
-
     return 0;
 }
