@@ -62,10 +62,7 @@ int main(int argc, char const* argv[]) {
 
     for(int j=0; j<numLines; j++){
         getline(ifs, toPrint);
-        if(j<numLines-1)
-            cout << toPrint << endl;
-        else
-            cout << toPrint;
+        cout << toPrint << endl;
     }
 
     //cout << "Lines: " << numLines << endl << "File: " << textFile << endl;
