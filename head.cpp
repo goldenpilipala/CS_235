@@ -47,13 +47,16 @@ int main(int argc, char const* argv[]) {
 
     //See if lines in the file are less than numLines, and if so reassign numLines
     int i = 0;
+    string line;
+
     while(!ifs.eof()){
-        string line;
         getline(ifs, line);
         i++;
     }
     if(i < numLines)
         numLines = i;
+    if(line.size() == 0)
+        i--;
 
     //Print numLines of file
     ifs.close();
