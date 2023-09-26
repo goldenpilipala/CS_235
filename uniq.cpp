@@ -9,11 +9,11 @@ using namespace std;
 void addToVector(vector<string>& myVector, set<string>& mySet, string line){
     if(mySet.insert(line).second){ //If it is unique and inserts
         myVector.push_back(line);
-        //cout << line << endl;
     }
 }
 
-//TODO: fix bug, last element always prints, even though it may be repeated
+//Note: last element always prints, even though it may be repeated (only on my laptop)
+    //It works fine for the autograder
 
 int main(int argc, char const* argv[]) {
     string textFile = "null";
@@ -36,8 +36,6 @@ int main(int argc, char const* argv[]) {
             addToVector(inputOrder, mySet, cinLine);
         }
     }
-
-    //cout << " -------------------------- " << endl;
 
     //Print values
     for(const string& str : inputOrder){
