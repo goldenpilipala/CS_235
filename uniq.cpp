@@ -9,7 +9,7 @@ using namespace std;
 void addToVector(vector<string>& myVector, set<string>& mySet, string line){
     if(mySet.insert(line).second){ //If it is unique and inserts
         myVector.push_back(line);
-        cout << line << endl;
+        //cout << line << endl;
     }
 }
 
@@ -37,7 +37,7 @@ int main(int argc, char const* argv[]) {
         }
     }
 
-    cout << " -------------------------- " << endl;
+    //cout << " -------------------------- " << endl;
 
     //Print values
     for(const string& str : inputOrder){
