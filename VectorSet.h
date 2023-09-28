@@ -39,23 +39,18 @@ public:
     }
 
     int size() const {
-        // implement size here
-
         // return the number of items in the set
-        return 0;
+        return t.size();
     }
 
     bool empty() const {
-        // implement empty here
-
         // return true if the set is empty and return false otherwise
-        return true;
+        return t.empty();
     }
 
     void clear() {
-        // implement clear here
-
         // remove all items from the set
+        t.clear();
     }
 
 private:
