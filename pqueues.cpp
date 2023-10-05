@@ -33,18 +33,13 @@ void add(priority_queue<string>& Q){
    int priority;
 
     //NAME
-    cout << "Name: " << endl;
+    cout << "Name: ";
     getline(cin, name);
 
     //PRIORITY
-    //do {
-        cout << "Priority: " << endl;
-        //cin >> priority;
-        //cin.ignore();
-        getline(cin, line);
-        priority = stoi(line);
-    //} while(!validateInt());
-   //cin.ignore();
+    cout << "Priority: ";
+    getline(cin, line);
+    priority = stoi(line);
 
     if(priority < 10)
         Q.push("0" + to_string(priority) + " - " + name);
@@ -63,13 +58,13 @@ void take(priority_queue<string>& Q){
     }
 }
 
-int main() { //combine priority and name for queue, then when taking it, parse the name out
+int main() { //TODO: problems validating data, but it isn't needed for this program
     string operation;
     priority_queue<string> pqNames;
 
     //OPERATION
     do {
-        cout << "What do you want to do? " << endl;
+        cout << "What do you want to do? ";
         getline(cin, operation);
 
     if (operation == "add")
