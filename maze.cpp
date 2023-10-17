@@ -43,6 +43,8 @@ bool solveMaze(Grid maze, int r, int c, int l){
         return true;
     }
 
+    // If no path is found, mark the cell as unvisited again
+    maze.at(r, c, l) = 1;
 
     return false;
 }
@@ -80,7 +82,7 @@ int main(int argc, char* argv[]) {
         ofs << "NO SOLUTION";
     }
 
-    cout << maze.height() << " " << maze.width() << " " << maze.depth() << endl;
+    //cout << maze.height() << " " << maze.width() << " " << maze.depth() << endl;
 
     //Close the file
     ifs.close();
